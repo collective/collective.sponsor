@@ -1,0 +1,15 @@
+.sponsorImageContainer {
+    float: left;
+    margin: 0 1em 0.5em 0;
+    }
+
+.sponsor {
+	float: left;
+	margin: 0 1em 1em 0em;
+	}
+
+.sponsor:hover {
+	box-shadow: 0 0 8px #000000;
+	-moz-box-shadow: 0 0 8px #000000;
+	-webkit-box-shadow: 0 0 8px #000000;
+	}

@@ -1,0 +1,41 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.sponsor">
+
+  <include package="plone.app.contentmenu" />
+
+  <browser:resourceDirectory
+      name="collective.sponsor.images"
+      directory="images"
+      />
+
+  <browser:resourceDirectory
+      name="collective.sponsor.stylesheets"
+      directory="stylesheets"
+      />
+
+  <browser:page
+      for="..interfaces.ISponsor"
+      name="view"
+      class=".sponsor.SponsorView"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      for="..interfaces.ISponsorFolder"
+      name="view"
+      class=".sponsorfolder.SponsorFolderView"
+      permission="zope2.View"
+      />
+
+  <browser:viewlet
+      name="collective.sponsor.sponsorbox"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".sponsorbox.SponsorboxViewlet"
+      permission="zope.Public"
+      />
+
+</configure>

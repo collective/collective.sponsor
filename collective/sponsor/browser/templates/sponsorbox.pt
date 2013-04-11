@@ -1,0 +1,22 @@
+<div metal:define-macro="portal_sponsorbox"
+     i18n:domain="collective.sponsor">
+    
+	<div id="portal-sponsorbox" tal:define="sponsors view/sponsors;">
+	
+	    <div id="" tal:repeat="category view/filtered_categories" tal:attributes="id python:'category-' + category">
+	    
+	    	<h1 tal:content="python: category.capitalize()">Sponsor</h1>
+	    
+	        <tal:images tal:define="images python: sponsors[category];" tal:repeat="image images">
+	            <div class="sponsor" tal:define="sponsor_url python: image.external and image.website or image.absolute_url; sponsor_title image/pretty_title_or_id; sponsor_desc image/Description; ">
+	            	<a href="" tal:attributes="href sponsor_url; title sponsor_desc;"><img src="" alt="" tal:replace="structure python:image.tag(scale='thumb', title=image.Description())" /></a>
+	            </div>
+	        </tal:images>
+	        
+	        <div class="visualClear"><!-- --></div>
+	    
+	    </div>
+
+    </div>
+	    
+</div>

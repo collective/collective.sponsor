@@ -1,0 +1,63 @@
+<metal:page define-macro="master">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+      lang="en-US"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="collective.sponsor">
+
+<body>
+
+<div metal:fill-slot="main">
+<metal:main_macro define-macro="main"
+     tal:define="sponsors view/sponsors;
+                 categories view/categories;
+                 kssClassesView context/@@kss_field_decorator_view;
+                 getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                 templateId template/getId;
+                 ">
+
+    <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+    <h1 tal:content="here/pretty_title_or_id" class="documentFirstHeading">Title or id</h1>
+
+    <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+    <p metal:use-macro="here/kss_generic_macros/macros/generic_description_view">
+        Description
+    </p>
+        
+    <div tal:replace="structure provider:plone.abovecontentbody" />
+    
+    <tal:categories tal:repeat="category view/filtered_categories">
+    
+    <h2 tal:content="python: category.capitalize()">Sponsor</h2>
+    
+        <tal:images tal:define="images python: sponsors[category];" tal:repeat="image images">
+            <div class="sponsor" tal:define="sponsor_url python: image.absolute_url; sponsor_title image/pretty_title_or_id; sponsor_desc image/Description; ">
+            	<a href="" tal:attributes="href sponsor_url; title sponsor_desc;"><img src="" alt="" tal:replace="structure python:image.tag(scale='thumb', title=image.Description())" /></a>
+            </div>
+        </tal:images>
+        
+        <div class="visualClear"><!-- --></div>
+    
+    </tal:categories>
+    
+    <p class="discreet"
+       i18n:domain="atcontenttypes"
+       i18n:translate="text_no_sponsors_uploaded"
+       tal:condition="not: sponsors">
+        No sponsors uploaded yet.
+    </p>
+
+    <div metal:use-macro="here/document_relateditems/macros/relatedItems">
+    	Show related items if they exist
+    </div>
+
+    <div tal:replace="structure provider:plone.belowcontentbody" />
+
+</metal:main_macro>
+</div>
+
+</body>
+
+</html>
+</metal:page>

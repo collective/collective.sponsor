@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./profiles/default/types/Sponsor_Folder.xml
+msgid "A folder which can contain sponsors."
+msgstr "Ein Ordner, der Sponsoren enthalten kann."
+
+#: ./content/sponsorfolder.py:28
+#: ./interfaces.py:18
+msgid "Body Text"
+msgstr "Haupttext"
+
+#: ./content/sponsor.py:50
+#: ./interfaces.py:25
+msgid "Category"
+msgstr "Kategorie"
+
+#: ./content/sponsor.py:43
+msgid "Check to use external links on spnsor logos."
+msgstr ""
+
+#: ./interfaces.py:15
+msgid "Description"
+msgstr "Beschreibung"
+
+#: ./content/sponsor.py:42
+msgid "External link"
+msgstr "Externer Link"
+
+#: ./content/sponsor.py:36
+#: ./interfaces.py:22
+msgid "Please enter a Website URL."
+msgstr "Bitte geben Sie eine Website an."
+
+#: ./content/sponsor.py:51
+#: ./interfaces.py:26
+msgid "Please select a category."
+msgstr "Bitte wählen Sie eine Kategorie."
+
+#: ./interfaces.py:16
+msgid "Short Description of the Body Text."
+msgstr "Eine kurze Beschreibung des Haupttextes."
+
+#: ./profiles/default/types/Sponsor.xml
+msgid "Sponsor"
+msgstr "Sponsor"
+
+#: ./profiles/default/types/Sponsor.xml
+msgid "Sponsor Content Type"
+msgstr "Sponsor Content Typ"
+
+#: ./profiles/default/types/Sponsor_Folder.xml
+msgid "Sponsor Folder"
+msgstr "Sponsoren Ordner"
+
+#: ./interfaces.py:12
+msgid "Title"
+msgstr "Titel"
+
+#: ./content/sponsor.py:35
+#: ./interfaces.py:21
+msgid "Website URL"
+msgstr "Website Adresse"
+
+#. Default: "Logo or image of the sponsor"
+#: ./content/sponsor.py:62
+msgid "label_image_field"
+msgstr "Logo oder Bild des Sponsors"
+
+#. Default: "Visit the Website of our Sponsor"
+#: ./browser/templates/sponsor.pt:53
+msgid "visit_website"
+msgstr "Besuchen Sie die Website unseres Sponsors"
+
